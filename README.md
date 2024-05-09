@@ -27,4 +27,4 @@ Contributions are welcome! If you have any suggestions for improvements or new f
 This project is licensed under the MIT License. See the LICENSE file for details.
 
 ## Author:
-This calculator application was developed by [Your Name]. Feel free to reach out with any questions or feedback.
+This calculator application was developed by [mohamedabdellhay](https://www.linkedin.com/in/mohamedabdellhay). Feel free to reach out with any questions or feedback.
