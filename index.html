@@ -3,24 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add New Post</title>
+    <link rel="stylesheet" href="./index.css" />
+    <title>Calculator</title>
 </head>
 <body>
-    <form method="POST" action="/add_post">
-    <input type="text" name="title" placeholder="Enter title">
-    <textarea name="content" placeholder="Enter content"></textarea>
-    <button type="submit">Add Post</button>
-</form>
-
-
-<div>
-    {%for post in posts%}
-    <div>
-        <h1>{{post["title"]}}</h1>
-        <p>{{post["content"]}}</p>
-    </div>
-    {%endfor%}
+   <div class="calculator">
+   <div class="header">
+      <div class="window">
+         <span class="red" onclick="closeTab()"></span>
+         <span class="yellow"></span>
+         <span class="green"></span>
+      </div>
+      <div class="input" id="display">
+        
+      </div>
+   </div>
+   <div class="keys">
+      <div class="row">
+         <div class="number">
+            <span value="7" onclick="addToDisplay(this.innerHTML)">7</span>
+            <span value="8" onclick="addToDisplay(this.innerHTML)">8</span>
+            <span value="9" onclick="addToDisplay(this.innerHTML)">9</span>
+         </div>
+         <div class="symbol">
+            <span value="÷"  onclick="addToDisplay(this.innerHTML)">÷</span>
+         </div>
+      </div>
+      <div class="row">
+         <div class="number">
+            <span value="4" onclick="addToDisplay(this.innerHTML)">4</span>
+            <span value="5" onclick="addToDisplay(this.innerHTML)">5</span>
+            <span value="6" onclick="addToDisplay(this.innerHTML)">6</span>
+         </div>
+         <div class="symbol">
+            <span value="-" onclick="addToDisplay(this.innerHTML)">-</span>
+         </div>
+      </div>
+      <div class="row">
+         <div class="number">
+            <span value="1" onclick="addToDisplay(this.innerHTML)">1</span>
+            <span value="2" onclick="addToDisplay(this.innerHTML)">2</span>
+            <span value="3" onclick="addToDisplay(this.innerHTML)">3</span>
+         </div>
+         <div class="symbol">
+            <span value="+" onclick="addToDisplay(this.innerHTML)">+</span>
+         </div>
+      </div>
+      <div class="row">
+         <div class="number">
+            <span class="dull" onclick="clearDisplay()">C</span>
+            <span value="0" onclick="addToDisplay(this.innerHTML)">0</span>
+            <span value="." onclick="addToDisplay(this.innerHTML)">.</span>
+         </div>
+         <div class="symbol action">
+            <span onclick="calculate()">=</span>
+         </div>
+      </div>
+   </div>
 </div>
+
+
+
+
+
+
+
+
+    <script src="./index.js"></script>
 </body>
 </html>
-
