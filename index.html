@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Post</title>
+</head>
+<body>
+    <form method="POST" action="/add_post">
+    <input type="text" name="title" placeholder="Enter title">
+    <textarea name="content" placeholder="Enter content"></textarea>
+    <button type="submit">Add Post</button>
+</form>
+
+
+<div>
+    {%for post in posts%}
+    <div>
+        <h1>{{post["title"]}}</h1>
+        <p>{{post["content"]}}</p>
+    </div>
+    {%endfor%}
+</div>
+</body>
+</html>
+
